@@ -31,25 +31,36 @@ body {
   visibility: hidden;
 }
 
-header {
+.header {
   text-align: center;
   font-size: 18px;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  z-index: 2;
 }
-
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px; /* replace with actual footer height */
+}
 .heading {
   font-size: 3em;
+  
 }
 
 .tile-container {
   display: grid;
-  grid-template-rows: 180px 180px 180px;
-  grid-template-columns: 180px 180px 180px;
+  grid-template-rows: 150px 150px 150px ;
+  grid-template-columns: 150px 150px 150px 150px;
   grid-gap: 25px;
-  position: relative;
+  position: absolute;
   margin-top: 30px;
   margin-bottom: 40px;
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
+  z-index: 1;
 
 }
 
@@ -246,7 +257,9 @@ header {
 
 @media screen and (max-width: 550px) {
   .game {
-    width: 100%;
+    width: 80%;
+    max-width: 400px;
+    max-height: 400px;
     padding-left: 20px;
     padding-right: 20px;
   }
